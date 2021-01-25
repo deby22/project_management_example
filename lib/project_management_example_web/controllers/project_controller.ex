@@ -11,14 +11,14 @@ defmodule ProjectManagementExampleWeb.ProjectController do
     render(conn, "index.json", projects: projects)
   end
 
-  def create(conn, %{"project" => project_params}) do
-    with {:ok, %Project{} = project} <- Management.create_project(project_params) do
-      conn
-      |> put_status(:created)
-      |> put_resp_header("location", Routes.project_path(conn, :show, project))
-      |> render("show.json", project: project)
-    end
-  end
+  # def create(conn, %{"project" => project_params}) do
+  #   with {:ok, %Project{} = project} <- Management.create_project(project_params) do
+  #     conn
+  #     |> put_status(:created)
+  #     |> put_resp_header("location", Routes.project_path(conn, :show, project))
+  #     |> render("show.json", project: project)
+  #   end
+  # end
 
   def show(conn, %{"id" => id}) do
     project = Management.get_project!(id)
