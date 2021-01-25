@@ -45,7 +45,8 @@ defmodule ProjectManagementExample.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:ja_serializer, github: "vt-elixir/ja_serializer"}
+      {:ja_serializer, github: "vt-elixir/ja_serializer"},
+      {:poison, "~> 3.1"}
     ]
   end
 
